@@ -24,7 +24,6 @@ header ul li {
 }
 
 header ul li:hover{
-    background-color: rgb(167, 38,162);
     border-radius: 10px;
     transition: 1s;
 }
@@ -32,9 +31,11 @@ header ul li:hover{
 header ul li a {
     color: aliceblue;
     text-decoration: none;
+    padding: 10px;
 }
 
 header ul li a:hover{
+    background-color: rgb(167, 38,162);
     color: rgb(6, 104, 216);
     transition: 1s;
 }
@@ -122,6 +123,23 @@ main h1 {
     font-size: 22px;
 }
 
+.hidden {
+    display: none;
+}
+
+.icon {
+    font-size: 25pt;
+    border: 2px solid white;
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding: 0 5px;
+    background-color:blueviolet;
+    color: white;
+    border-radius: 4px;
+}
+
 @media screen and (max-width: 1200px ) {
     .orcamentos {
        grid-template-columns: 33% 33% 33%; 
@@ -135,7 +153,25 @@ main h1 {
 }
 
 @media screen and (max-width: 500px) {
+
+    header ul {
+        flex-direction: column;
+    }
+
     .orcamentos {
         grid-template-columns: 100%;
     }
+
+    .icon {
+        display: inline;
+    }
+
+    .hidden-mob {
+        display: none;
+    }
+
+    [name="email"]{
+        display: none;
+    }
 }
+
